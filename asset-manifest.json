@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Amdy-Portfolio/static/css/main.6f9bdbf6.css",
+    "main.js": "/Amdy-Portfolio/static/js/main.c9143f44.js",
+    "static/js/453.4e987572.chunk.js": "/Amdy-Portfolio/static/js/453.4e987572.chunk.js",
+    "static/media/abstract-hexagon-ban.webp": "/Amdy-Portfolio/static/media/abstract-hexagon-ban.78b259a8cf9f1ed06ac0.webp",
+    "index.html": "/Amdy-Portfolio/index.html",
+    "main.6f9bdbf6.css.map": "/Amdy-Portfolio/static/css/main.6f9bdbf6.css.map",
+    "main.c9143f44.js.map": "/Amdy-Portfolio/static/js/main.c9143f44.js.map",
+    "453.4e987572.chunk.js.map": "/Amdy-Portfolio/static/js/453.4e987572.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f9bdbf6.css",
+    "static/js/main.c9143f44.js"
+  ]
+}
