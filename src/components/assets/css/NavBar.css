@@ -1,0 +1,123 @@
+/* Barre de navigation fixe */
+nav {
+  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color); /* Couleur par défaut */
+    padding: 15px 20px;
+    position: fixed; /* Barre de navigation fixe */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+  }
+  
+  /* Couleur de la barre au scroll */
+  nav.scrolled {
+    background-color: var(--secondary-color); /* Couleur au scroll */
+  }
+  
+  /* Autres styles de la barre de navigation */
+  .nav-logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  .nav-logo img{
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 0 15px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+  }
+  
+  /* Effet de survol */
+  .nav-links li a:hover {
+    color: #f1f1f1;
+    border-bottom: 2px solid #f1f1f1;
+  }
+
+  .nav-toggle{
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive avec menu burger */
+  @media (max-width: 768px) {
+
+    .nav-links {
+      position: absolute;
+      top: 65px;
+      right: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      transition: max-height 0.3s ease-out;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+  
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 300px;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 15px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 300px; /* Ajuste cette valeur selon le nombre de liens */
+    }
+  
+    .nav-toggle-label {
+      display: block;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span:before,
+    .nav-toggle-label span:after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px auto;
+      transition: all 0.3s ease;
+    }
+  
+    .nav-toggle:checked + .nav-toggle-label span {
+      background-color: transparent;
+    }
+  
+    .nav-toggle:checked + .nav-toggle-label span:before {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .nav-toggle:checked + .nav-toggle-label span:after {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    .nav-toggle-label span:before,
+    .nav-toggle-label span:after {
+      position: absolute;
+    }
+  } 
